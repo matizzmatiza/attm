@@ -1,0 +1,31 @@
+@media (max-width: 1660px) {
+    .nutrients__box {
+        width: 1320px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 1360px) {
+    .nutrients__box {
+        width: 1020px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 1100px) {
+    .nutrients__box {
+        width: 500px;
+        font-size: 14px;
+    }
+    .nutrients__text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 585px) {
+    .nutrients__box {
+        width: 400px;
+    }
+}
+@media (max-width: 460px) {
+    .nutrients__box {
+        width: 300px;
+    }
+}

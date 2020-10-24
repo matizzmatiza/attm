@@ -1,0 +1,101 @@
+@media (max-width: 1660px) {
+    .bmi-score__element--title {
+        width: 1320px;
+        font-size: 55px;
+    }
+    .bmi-score__element--picture {
+        width: 500px;
+    }
+    .bmi-score__element--description, .bmi-score__element--recommendations, .bmi-score__element--different {
+        width: 800px;
+    }
+    .container {
+        max-width: 1320px;
+    }
+}
+@media (max-width: 1360px) {
+    .bmi-score__element--title {
+        width: 1020px;
+        font-size: 45px;
+    }
+    .bmi-score__element--picture {
+        width: 400px;
+    }
+    .bmi-score__element--picture img {
+        width: 350px;
+    }
+    .bmi-score__element--description, .bmi-score__element--recommendations, .bmi-score__element--different {
+        width: 600px;
+    }
+    .container {
+        max-width: 1020px;
+    }
+}
+@media (max-width: 1100px) {
+    .bmi-score {
+        min-height: 2200px !important;
+        grid-template-columns: 1fr;
+    }
+    .bmi-score__element--title {
+        width: 500px;
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+    } 
+    .bmi-score__element--picture {
+        width: 500px;
+        margin-bottom: 0;
+        grid-column: 1 / 1;
+        grid-row: 2 / 3;
+    }
+    .bmi-score__element--picture img {
+        width: 400px;
+    }
+    .bmi-score__element--description {
+        width: 500px;
+        grid-column: 1 / 1;
+        grid-row: 3 / 4;
+    }
+    .bmi-score__element--recommendations {
+        width: 500px;
+        grid-column: 1 / 1;
+        grid-row: 4 / 5;
+    }
+    .bmi-score__element--different {
+        width: 500px;
+        grid-column: 1 / 1;
+        grid-row: 5 / 7;
+    }
+    .container {
+        max-width: 500px;
+    }
+    .back-g {
+        min-height: 2200px !important;
+    }
+}
+@media (max-width: 585px) {
+    .bmi-score__element--title {
+        font-size: 35px;
+    }
+    .bmi-score__element--title, .bmi-score__element--picture, .bmi-score__element--description, .bmi-score__element--recommendations, .bmi-score__element--different {
+        width: 400px;
+    }
+    .bmi-score__element--picture img {
+        width: 350px;
+    }
+}
+@media (max-width: 460px) {
+    .bmi-score__element--title, .bmi-score__element--picture, .bmi-score__element--description, .bmi-score__element--recommendations, .bmi-score__element--different {
+        width: 300px;
+    }
+    .container {
+        min-width: 350px !important;
+    }
+    .bmi-score__element--picture img {
+        width: 250px;
+    }
+}
+@media (max-height: 947px) {
+    .back-g {
+        min-height: 768px;
+    }
+}

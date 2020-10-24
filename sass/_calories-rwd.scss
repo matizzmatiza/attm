@@ -1,0 +1,52 @@
+@media (max-width: 1660px) {
+    .calories-score__table-box {
+        width: 1320px;
+        overflow-y: hidden;
+    }
+}
+@media (max-width: 1360px) {
+    .calories-score__table-box {
+        width: 1020px;
+    }
+    .calories-score__information {
+        width: 1020px;
+    }
+}
+@media (max-width: 1100px) {
+    .calories-score__table-box {
+        position: relative;
+        width: 500px;
+        overflow-x: auto;
+    }
+    .bg-mobile {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .calories-score__information {
+        width: 500px;
+    }
+    .calories-score__table {
+        min-width: 1020px
+    }
+}      
+@media (max-width: 585px) {
+    .calories-score__table-box {
+        width: 400px;
+    }
+    .calories-score__information {
+        width: 400px;
+    }
+} 
+@media (max-width: 460px) {
+    .calories-score__table-box {
+        width: 300px;
+    }
+    .calories-score__information {
+        width: 300px;
+    }
+}
+@media (min-height: 1200px) and (max-height: 1200px) {
+    .calories-score__table-box {
+        height: 1200px;
+    }
+}

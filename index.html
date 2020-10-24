@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <script>
+            window.addEventListener('load', () => {
+                const loader = document.querySelector('.loading');
+                loader.className += " hide";
+            });
+        </script>
+        <script src="js/scrollreveal.min.js"></script>
+        <script>
+            window.sr = ScrollReveal({ reset: true });
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATTM</title>
+        <meta property="og:title" content="ATTM">
+        <meta property="og:url" content="http://www.attm.cba.pl">
+        <meta property="og:image" content="http://www.attm.cba.pl/img/logo.png">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="884">
+        <meta property="og:image:height" content="920">
+        <meta property="og:image:alt" content="Logo ATTM">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Najlepsza strona do obliczania wskaźnika bmi oraz bmr i więcej!">
+        <link rel="icon" href="img/logo.png">
+        <meta name="keywords" content="zdrowie, bmi, bmr, obliczanie">
+        <meta name="description" content="Najlepsza strona do obliczania wskaźnika bmi oraz bmr i więcej!">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <nav class="nav">
+            <div class="nav__logo animate__animated animate__backInLeft">
+                <a href="#" class="nav__link">
+                    <div class="position">
+                        <img class="nav__logo-img" src="img/logo.png" alt="logo">
+                        <span class="nav__logo-title">Corporation</span>
+                    </div>
+                </a>
+            </div>
+            <!-- MOBILME MENU ICON -->
+            <div class="nav__menu-mobile">
+                <img class="nav__menu-mobile-img animate__animated animate__backInRight" src="img/menu2.png">
+            </div>
+            <!-- MOBILE MENU CONTAINER -->
+            <div class="nav__menu-mobile-list animate__animated animate__backInDown">
+                <ul class="nav__menu-list-mobile">
+                    <li class="nav__menu-list-item-mobile"><a href="#yourdata" class="nav__menu-list-link nav__menu-list-link--one">Twoje dane</a></li>
+                    <li class="nav__menu-list-item-mobile"><a href="#bmiscore" class="nav__menu-list-link nav__menu-list-link--two">Wyniki BMI</a></li>
+                    <li class="nav__menu-list-item-mobile"><a href="#caloriesscore" class="nav__menu-list-link nav__menu-list-link--three">Zapotrzebowanie kaloryczne</a></li>
+                    <li class="nav__menu-list-item-mobile"><a href="#nutrients" class="nav__menu-list-link nav__menu-list-link--four">Składniki odżywcze</a></li>
+                </ul>
+                <div class="nav__menu-mobile-list-close">
+                    <img class="nav__menu-mobile-list-close-img" src="img/cross.png">
+                </div>
+            </div>
+            <!-- DESKTOP MENU -->
+            <div class="nav__menu">
+                <ul class="nav__menu-list">
+                    <li class="nav__menu-list-item animate__animated animate__backInRight"><a href="#yourdata" class="nav__menu-list-link">Twoje dane</a></li>
+                    <li class="nav__menu-list-item animate__animated animate__backInRight"><a href="#bmiscore" class="nav__menu-list-link">Wyniki - BMI</a></li>
+                    <li class="nav__menu-list-item animate__animated animate__backInRight"><a href="#caloriesscore" class="nav__menu-list-link">Zapotrzebowanie kaloryczne</a></li>
+                    <li class="nav__menu-list-item animate__animated animate__backInRight"><a href="#nutrients" class="nav__menu-list-link">Składniki odżywcze</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- INPUT DATA SECTION -->
+        <section class="input-data" id="yourdata">
+            <!-- WEIGHT -->
+            <div class="input-data__box show-item">
+                <div class="input-data__box-inner input-data__box-inner--weight">
+                    <div class="bg"></div>
+                    <p class="input-data__title">Podaj swoją wagę (kg)</p>
+                    <input class="input-data__input-text input-data__input-text--weight" type="text" maxlength="4">
+                    <span class="focus-bg"></span>
+                    <span class="input-data__chcek-input-weight">Wprowadź wartość.</span>
+                </div>
+            </div>
+            <!-- HEIGHT -->
+            <div class="input-data__box input-data__box--mobile show-item">
+                <div class="input-data__box-inner input-data__box-inner--height">
+                    <div class="bg"></div>
+                    <p class="input-data__title">Podaj swój wzrost (cm)</p>
+                    <input class="input-data__input-text input-data__input-text--height" type="text" maxlength="5">
+                    <span class="input-data__chcek-input-height">Wprowadź wartość.</span>
+                </div>
+            </div>
+            <!-- AGE -->
+            <div class="input-data__box show-item">
+                <div class="input-data__box-inner input-data__box-inner--age">
+                    <div class="bg"></div>
+                    <p class="input-data__title">Podaj swój wiek (lat)</p>
+                    <input class="input-data__input-text input-data__input-text--age" type="text" maxlength="3">
+                    <span class="input-data__chcek-input-age">Wprowadź wartość.</span>
+                </div>
+            </div>
+            <!-- SEX -->
+            <div class="input-data__box input-data__box--sex show-item">
+                <div class="input-data__box-inner input-data__box-inner--sex">
+                    <div class="bg"></div> 
+                    <p class="input-data__title">Zaznacz swoją płeć</p>
+                    <div class="input-data__box-inner-mobile-style">
+                        <input class="input-data__input-radio" type="radio" name="sex" id="sexMale" checked>
+                        <label class="input-data__checkbox-text" for="sexMale">Mężczyzna</label>
+                        <input class="input-data__input-radio" type="radio" name="sex" id="sexFemale">
+                        <label class="input-data__checkbox-text" for="sexFemale">Kobieta</label>
+                    </div>   
+                </div>
+            </div>
+            <!-- SELECT -->
+            <div class="input-data__box show-item">
+                <div class="input-data__box-inner input-data__box-inner--name">
+                    <div class="bg"></div>
+                    <p class="input-data__title">Jaka jest twoja aktywność?</p>
+                    <select class="select" style="z-index: 10;" id="option-list">
+                        <option id="1">siedzący</option>
+                        <option id="2">lekko aktywny</option>
+                        <option id="3">umiarkowanie aktywny</option>
+                        <option id="4">bardzo aktywny</option>
+                        <option id="5">ekstra aktywny</option>
+                    </select>
+                </div>
+            </div>
+            <!-- BUTTON --> 
+            <div class="input-data__box input-data__box--button show-item">
+                <a href="#bmiscore" style="text-decoration: none;">
+                    <div class="input-data__box-inner input-data__box-inner--button">
+                        <div class="bg"></div> 
+                        <button class="input-data__btn animate__animated animate__pulse animate__infinite" onclick="btnCheck()">Sprawdź!</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- BMI SCORE SECTION -->
+        <div class="back-g">
+            <div class="blocked1"><span class="animate__animated animate__headShake animate__infinite">Najpierw musisz wypełnić wszystkie dane! &nbsp; <a href="#">Wróć</a></span></div>
+            <section class="container" id="bmiscore">
+                <div class="bmi-score">
+                    <div class="bmi-score__element bmi-score__element--title show-item">
+                        <p class="bmi-score__name">Brak danych</p>
+                    </div>
+                    <div class="bmi-score__element bmi-score__element--picture show-item">
+                        <span class="bmi-score-title">Brak danych</span>
+                        <img src="img/cat1.jpg" alt="wygłodzenie" class="bmi-score-img bmi-score-img--1">
+                        <img src="img/cat2.jpg" alt="wychudzenie" class="bmi-score-img bmi-score-img--2">
+                        <img src="img/cat3.jpg" alt="niedowaga" class="bmi-score-img bmi-score-img--3">
+                    </div>
+                    <div class="bmi-score__element bmi-score__element--description show-item">
+                        <span class="bmi-score-box-title">Opis</span>
+                        <p class="bmi-score-p bmi-score-p-description">Brak danych</p>
+                    </div>
+                    <div class="bmi-score__element bmi-score__element--recommendations show-item">
+                        <span class="bmi-score-box-title">Zalecenia</span>
+                        <p class="bmi-score-p bmi-score-p-recommendations">Brak danych</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- CALORIES SCIRE SECTION -->
+        <section class="calories-score" id="caloriesscore">
+            <div class="blocked2"><span class="animate__animated animate__headShake animate__infinite">Najpierw musisz wypełnić wszystkie dane! &nbsp; <a href="#">Wróć</a></span></div>
+            <div class="calories-score__information calories-score__element show-item">
+                <div class="bg"></div>
+                <p class="calories-score__bmr-info-1">Brak danych</p>
+                <p class="calories-score__bmr-info-2">Brak danych</p>
+            </div>
+            <div class="calories-score__table-box calories-score__element show-item">
+            <table class="calories-score__table">
+                
+                    <thead>
+                        <tr>
+                            <th rowspan="2" class="width20 calories-score__table-th">Rodzaj aktywności</th>
+                            <th colspan="4" class="calories-score__table-th">Wydatek energetyczny (w kcal na minutę)</th>
+                        </tr>
+                        <tr>
+                            <th class="width20 calories-score__table-th">na 1kg m. c.</th>
+                            <th class="width20 width20 calories-score__table-th">Osoba o masie ciała 70kg</th>
+                            <th class="width20 width20 calories-score__table-th">Osoba o masie ciała 100kg</th>
+                            <th class="width20 width20 calories-score__table-th">Osoba o Twojej masie ciała</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="calories-score__table-th">Leżenie</th>
+                            <td class="calories-score__table-td">0,018</td>
+                            <td class="calories-score__table-td">1,2</td>
+                            <td class="calories-score__table-td">1,8</td>
+                            <td class="laying calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Siedzenie</th>
+                            <td class="calories-score__table-td">0,02</td>
+                            <td class="calories-score__table-td">1,4</td>
+                            <td class="calories-score__table-td">2,9</td>
+                            <td class="sitting calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Stanie</th>
+                            <td class="calories-score__table-td">0,022</td>
+                            <td class="calories-score__table-td">1,6</td>
+                            <td class="calories-score__table-td">2,2</td>
+                            <td class="standing calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Marsz wolny 3km/h</th>
+                            <td class="calories-score__table-td">0,05</td>
+                            <td class="calories-score__table-td">3,5</td>
+                            <td class="calories-score__table-td">5,0</td>
+                            <td class="march_slow calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Marsz szybki 6 km/h</th>
+                            <td class="calories-score__table-td">0,09</td>
+                            <td class="calories-score__table-td">6,3</td>
+                            <td class="calories-score__table-td">9,0</td>
+                            <td class="march_fast calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Bieg</th>
+                            <td class="calories-score__table-td">0,15</td>
+                            <td class="calories-score__table-td">10,5</td>
+                            <td class="calories-score__table-td">15</td>
+                            <td class="running calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Wchodzenie na schody</th>
+                            <td class="calories-score__table-td">0,2</td>
+                            <td class="calories-score__table-td">14</td>
+                            <td class="calories-score__table-td">20</td>
+                            <td class="climbing calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Prace domowe</th>
+                            <td class="calories-score__table-td">0,06</td>
+                            <td class="calories-score__table-td">4,2</td>
+                            <td class="calories-score__table-td">6,0</td>
+                            <td class="chores calories-score__table-td">Brak danych</td>
+                        </tr>
+                        <tr>
+                            <th class="calories-score__table-th">Odśnieżanie</th>
+                            <td class="calories-score__table-td">0,12</td>
+                            <td class="calories-score__table-td">8,4</td>
+                            <td class="calories-score__table-td">12</td>
+                            <td class="clearing_snow calories-score__table-td">Brak danych</td>
+                        </tr>
+                </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- NUTRIENTS -->
+        <section class="nutrients" id="nutrients">
+            <div class="blocked3"><span class="animate__animated animate__headShake animate__infinite">Najpierw musisz wypełnić wszystkie dane! &nbsp; <a href="#">Wróć</a></span></div>
+            <div class="nutrients__box nutrients__box--first show-item">
+                <div class="bg"></div>
+                <h2 class="nutrients_title nutrients__title--first"></h2>
+                <p class="nutrients__text nutrients__text--first">Brak danych</p>
+            </div>
+            <div class="nutrients__box nutrients__box--second show-item">
+                <div class="bg"></div>
+                <h2 class="nutrients_title nutrients__title--second"></h2>
+                <p class="nutrients__text nutrients__text--second">Brak danych</p>
+            </div>
+            <div class="nutrients__box nutrients__box--third show-item">
+                <div class="bg"></div>
+                <h2 class="nutrients_title nutrients__title--third"></h2>
+                <p class="nutrients__text nutrients__text--third">Brak danych</p>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__copyright">2020 &copyATTM Wszelkie prawa zatrzeżone.</div>
+            <div class="footer__info">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" class="footer__link">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="footer__link"> www.flaticon.com</a></div>
+        </footer>
+        <!-- ARROW UP -->
+        <div class="arrow-up animate__animated animate__fadeIn">
+            <img class="arrow-up__img" src="img/arrow-up.png">
+        </div>
+        <!-- SETTINGS BUTTON -->
+        <div class="settings">
+            <img src="img/moon.png" class="moonMode">
+            <img src="img/sun.png" class="sunMode">
+        </div>
+        <div class="settings-popup animate__animated animate__fadeIn">
+            <div class="settings-popup__box">
+                <p class="settings-popup__title">Tryb ciemny</p>
+                <button class="settings-popup__darkmode-btn">Włącz</button>
+            </div>
+        </div>
+        <!-- POPUP -->
+        <div class="popup-one animate__animated animate__fadeIn">
+            <div class="popup-one__box">
+                <p class="popup-one__title">Wprowadzono niewłaściwe dane!</p>
+                <img class="popup-one__close-btn" src="img/cross.png" onclick="closeOne()">
+            </div>
+        </div>
+        <div class="popup-two animate__animated animate__fadeIn">
+            <div class="popup-one__box">
+                <p class="popup-one__title">Nie wprowadzono wszystkich danych!</p>
+                <img class="popup-one__close-btn" src="img/cross.png" onclick="closeTwo()">
+            </div>
+        </div>
+        <!-- LOADING WEBPAGE -->
+        <div class="loading">
+            <img src="img/loading.gif" alt="Loading">
+            <p>Trwa wczytywanie strony...</p>
+        </div>
+        <script src="js/settings.js"></script>
+        <script src="js/sr.js"></script>
+        <script src="js/main.js"></script> 
+        <script src="js/arrow-up.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>
